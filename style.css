@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* === Button Grid Layout === */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* === Base Button Style === */
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Ensure buttons fill column evenly */
+}
+
+/* === Solid Button === */
+.btn.solid {
+  background: #1e90ff;
+  color: white;
+}
+.btn.solid:hover {
+  background: #1c7ed6;
+}
+
+/* === Outline Button === */
+.btn.outline {
+  background: transparent;
+  color: #00bcd4;
+  border: 2px solid #00bcd4;
+}
+.btn.outline:hover {
+  background: #00bcd4;
+  color: #121212;
+}
+
+/* === Gradient Button === */
+.btn.gradient {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+}
+.btn.gradient:hover {
+  opacity: 0.85;
+}
+
+/* === Glow Button === */
+.btn.glow {
+  background: #6a11cb;
+  color: white;
+  box-shadow: 0 0 12px #6a11cb;
+}
+.btn.glow:hover {
+  box-shadow: 0 0 20px #6a11cb, 0 0 40px #6a11cb;
+}
+
+/* === Neon Button === */
+.btn.neon {
+  background: transparent;
+  color: #39ff14;
+  border: 2px solid #39ff14;
+  text-shadow: 0 0 5px #39ff14;
+}
+.btn.neon:hover {
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+/* === Glass Button === */
+.btn.glass {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.btn.glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
+}
+
+/* === Shadow Button === */
+.btn.shadow {
+  background: #2c2c2c;
+  color: #fff;
+  box-shadow: 4px 4px 0 #00bcd4;
+}
+.btn.shadow:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #00bcd4;
+}
+
+/* === Icon Button === */
+.btn.icon {
+  background: #1e90ff;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+}
+.btn.icon:hover {
+  background: #1c7ed6;
+}
+
+/* === Animated Border Button === */
+.btn.border-animate {
+  background: transparent;
+  color: #00bcd4;
+  border: 2px solid #00bcd4;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn.border-animate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #00bcd4;
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+.btn.border-animate:hover::before {
+  left: 0;
+}
+.btn.border-animate:hover {
+  color: #121212;
+}
+.btn.border-animate span {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Text Reveal Button === */
+.btn.text-hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid #00c6ff;
+  transition: all 0.4s ease;
+}
+.btn.text-hover:hover {
+  background: #fff;
+  color: #121212;
+  -webkit-text-fill-color: initial;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .button-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .button-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+}
