@@ -16,4 +16,6 @@ A modern and responsive collection of CSS buttons with beautiful hover effects �
 ---
 ## 🧑‍💻 Author
 
-Made with ❤ LOKESH K
+Made with ❤️ LOKESH K
+
+---
